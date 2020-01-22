@@ -1,0 +1,5 @@
+Jalali		KEYWORD1
+is_date_valid	KEYWORD2
+is_year_leap	KEYWORD2
+convert_date	KEYWORD2
+day_of_week	KEYWORD2
