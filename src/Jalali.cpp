@@ -129,10 +129,10 @@ bool Jalali::is_year_leap(int year, int calendar)
         days1 = jalali_jd0(year + 1) + 1;
         if ((days1 - days0) == 366)
         {
-            gmonths[11] = 30;
+            jmonths[11] = 30;
             return true;
         }
-        gmonths[11] = 29;
+        jmonths[11] = 29;
         return false;
     }
     else
