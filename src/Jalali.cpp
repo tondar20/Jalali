@@ -19,8 +19,8 @@ int jmonths[12] = {31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29};
 
 long jalali_jd0(int jalali_year)
 {
-    const PROGMEM int breaks[] = {6, 394, 720, 786, 1145, 1635, 1701, 1866, 2328};
-    const PROGMEM int deltas[] = {1249, 952, 891, 930, 866, 869, 844, 848, 852};
+    const int breaks[] = {6, 394, 720, 786, 1145, 1635, 1701, 1866, 2328};
+    const int deltas[] = {1249, 952, 891, 930, 866, 869, 844, 848, 852};
     long rval;
     long l = jalali_year;
 
@@ -177,9 +177,7 @@ bool Jalali::is_date_valid(int year, int month, int day, int calendar)
         mnt = gmonths[month];
     }
 
-    if (day > mnt)
-        return false;
-    return true;
+    return day <= mnt;
 }
 
 void Jalali::convert_date(int year, int month, int day, int &cyear, int &cmonth, int &cday, int calendar)
